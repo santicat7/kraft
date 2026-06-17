@@ -449,6 +449,9 @@ section { position: relative; }
    ================================================================= */
 .coach { padding: clamp(70px, 10vh, 130px) 0; }
 .coach-grid { display: grid; grid-template-columns: 0.85fr 1fr; gap: clamp(36px, 6vw, 90px); align-items: center; }
+/* versión invertida: texto izquierda, imagen derecha */
+.coach-reverse { padding-top: 0; }
+.coach-reverse .coach-grid { grid-template-columns: 1fr 0.85fr; }
 .coach-media { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/5; }
 .coach-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .coach-media:hover img { transform: scale(1.05); }
