@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kraft Pádel Center · Paysandú</title>
+  <meta name="description" content="Kraft Pádel Center — Pádel, funcional, gimnasio y comunidad en Paysandú. Florida 1573. Reservá tu cancha, sumate a las clases con el profe Santiago Santos y viví el club." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kraft Pádel Center · Paysandú" />
+  <meta property="og:description" content="No somos solo una cancha. Somos un espacio donde el pádel, el entrenamiento y la comunidad se encuentran." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=20260617c" />
+</head>
+<body>
+
+  <!-- ============ PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo-link" data-cursor="hover" aria-label="Kraft — inicio">
+        <!-- REEMPLAZAR con: <img src="assets/img/logo.png" class="nav-logo" alt="Kraft"> -->
+        <span class="nav-logo-placeholder">KRAFT<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#servicios" data-cursor="hover">Servicios</a>
+        <a href="#planes" data-cursor="hover">Planes</a>
+        <a href="#profe" data-cursor="hover">Clases</a>
+        <a href="#reserva" data-cursor="hover">Reservá</a>
+        <a href="#contacto" data-cursor="hover">Contacto</a>
+      </nav>
+
+      <a href="#reserva" class="btn btn-lime nav-cta" data-magnetic data-cursor="hover">Reservá tu cancha</a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE OVERLAY ============ -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <nav class="nav-overlay-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#planes">Planes</a>
+      <a href="#profe">Clases</a>
+      <a href="#reserva">Reservá</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#reserva" class="btn btn-lime nav-overlay-cta">Reservá tu cancha</a>
+    <p class="nav-overlay-handle">@kraftpadeluy</p>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" id="heroBg">
+        <img src="assets/img/hero.jpg" alt="Cancha de pádel Kraft" fetchpriority="high" decoding="async" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-pill" data-reveal>
+          <span class="hero-pill-dot"></span> PAYSANDÚ · FLORIDA 1573
+        </div>
+
+        <p class="hero-eyebrow" data-reveal>Bienvenidos a</p>
+
+        <h1 class="hero-title">
+          <span class="line"><span class="line-inner">KRAFT<span class="dot">.</span></span></span>
+          <span class="line hero-title-sub"><span class="line-inner">PÁDEL CENTER</span></span>
+        </h1>
+
+        <p class="hero-sub" data-reveal>
+          No somos solo una cancha. Somos un espacio donde el pádel, el entrenamiento
+          y la comunidad se encuentran en un mismo lugar.
+        </p>
+
+        <div class="hero-pills" data-reveal>
+          <span class="cat-pill is-active">Pádel</span>
+          <span class="cat-pill">Funcional</span>
+          <span class="cat-pill">Gimnasio</span>
+          <span class="cat-pill">Comunidad</span>
+        </div>
+
+        <div class="hero-actions" data-reveal>
+          <a href="#reserva" class="btn btn-lime" data-magnetic data-cursor="hover">Reservá tu cancha</a>
+          <a href="#planes" class="btn btn-outline" data-magnetic data-cursor="hover">Conocé los planes</a>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <a href="https://instagram.com/kraftpadeluy" target="_blank" rel="noopener" class="hero-handle" data-cursor="hover">@kraftpadeluy</a>
+        <div class="hero-scroll">
+          <span>Scroll</span>
+          <span class="hero-scroll-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPONSORS LOOP ============ -->
+    <section class="sponsors" aria-label="Marcas">
+      <div class="sponsors-track" id="sponsorsTrack">
+        <!-- group repeated x2 for seamless loop -->
+        <div class="sponsors-group">
+          <span class="sponsor"><img src="assets/img/logos/nox.png" alt="Nox" /></span>
+          <span class="sponsor"><img src="assets/img/logos/bullpadel.png" alt="Bullpadel" /></span>
+          <span class="sponsor"><img src="assets/img/logos/babolat.png" alt="Babolat" /></span>
+          <span class="sponsor"><img src="assets/img/logos/siux.png" alt="Siux" /></span>
+          <span class="sponsor"><img src="assets/img/logos/adidas.png" alt="Adidas" /></span>
+          <span class="sponsor"><img src="assets/img/logos/head.png" alt="Head" /></span>
+          <span class="sponsor"><img src="assets/img/logos/decathlon.png" alt="Decathlon" /></span>
+        </div>
+        <div class="sponsors-group" aria-hidden="true">
+          <span class="sponsor"><img src="assets/img/logos/nox.png" alt="" /></span>
+          <span class="sponsor"><img src="assets/img/logos/bullpadel.png" alt="" /></span>
+          <span class="sponsor"><img src="assets/img/logos/babolat.png" alt="" /></span>
+          <span class="sponsor"><img src="assets/img/logos/siux.png" alt="" /></span>
+          <span class="sponsor"><img src="assets/img/logos/adidas.png" alt="" /></span>
+          <span class="sponsor"><img src="assets/img/logos/head.png" alt="" /></span>
+          <span class="sponsor"><img src="assets/img/logos/decathlon.png" alt="" /></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTRO / QUIÉNES SOMOS ============ -->
+    <section class="intro" id="nosotros">
+      <div class="container">
+        <p class="section-label" data-reveal>Quiénes somos</p>
+        <h2 class="intro-headline split-words">
+          Entrená. Aprendé. <span class="lime">Dominá.</span>
+        </h2>
+        <p class="intro-text" data-reveal>
+          En Kraft el pádel es más que un deporte. Es entrenamiento, técnica y comunidad
+          en un mismo lugar. Vení a jugar, a mejorar y a quedarte.
+        </p>
+        <p class="intro-founder" data-reveal>
+          Kraft nació de la visión de <strong>Valentín Laborde</strong>: un espacio donde el
+          pádel y la comunidad se encuentran.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ OUR SERVICES ============ -->
+    <section class="services" id="servicios">
+      <div class="container">
+        <div class="services-head">
+          <p class="section-label" data-reveal>Nuestros servicios</p>
+          <h2 class="section-title split-words">Todo lo que Kraft tiene para vos</h2>
+        </div>
+
+        <div class="services-list">
+
+          <article class="service" data-reveal>
+            <div class="service-num">01</div>
+            <div class="service-body">
+              <h3 class="service-title">Reserva de canchas</h3>
+              <p class="service-desc">
+                Reservá tu cancha por hora. Elegí día y horario, y asegurá tu lugar.
+                Canchas profesionales listas para jugar.
+              </p>
+            </div>
+            <div class="service-action">
+              <a href="#reserva" class="service-link" data-cursor="hover">Reservar <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="service" data-reveal>
+            <div class="service-num">02</div>
+            <div class="service-body">
+              <h3 class="service-title">Clases de pádel</h3>
+              <p class="service-desc">
+                3 clases de pádel al mes con el profe Santiago Santos. Técnica real,
+                correcciones personalizadas. De principiante a competitivo.
+              </p>
+            </div>
+            <div class="service-action">
+              <a href="#profe" class="service-link" data-cursor="hover">Conocer al profe <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="service" data-reveal>
+            <div class="service-num">03</div>
+            <div class="service-body">
+              <h3 class="service-title">Entrenamiento funcional</h3>
+              <p class="service-desc">
+                Funcional lunes, miércoles y viernes. Turnos de 18:00 a 19:00 o de
+                19:00 a 20:00. Entrenamiento con método.
+              </p>
+            </div>
+            <div class="service-action">
+              <a href="#planes" class="service-link" data-cursor="hover">Ver planes <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="service" data-reveal>
+            <div class="service-num">04</div>
+            <div class="service-body">
+              <h3 class="service-title">Gimnasio</h3>
+              <p class="service-desc">
+                Gym y material de entrenamiento disponibles fuera de los horarios de
+                clase. Acceso libre según tu plan.
+              </p>
+            </div>
+            <div class="service-action">
+              <a href="#planes" class="service-link" data-cursor="hover">Ver planes <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="service" data-reveal>
+            <div class="service-num">05</div>
+            <div class="service-body">
+              <h3 class="service-title">Espacio social</h3>
+              <p class="service-desc">
+                Juegos de mesa, ping pong, PlayStation y televisión. Más cantina con
+                bebidas y comidas. La comunidad se arma acá.
+              </p>
+            </div>
+            <div class="service-action">
+              <a href="#comunidad" class="service-link" data-cursor="hover">Ver comunidad <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANES ============ -->
+    <section class="plans" id="planes">
+      <div class="container">
+        <div class="plans-head">
+          <p class="section-label" data-reveal>Membresías</p>
+          <h2 class="section-title split-words">Elegí tu plan</h2>
+        </div>
+
+        <figure class="plans-media" data-reveal>
+          <!-- REEMPLAZAR plan.jpg por la foto real del club -->
+          <img src="assets/img/plan.jpg" alt="Kraft Pádel Center" loading="lazy" decoding="async" />
+        </figure>
+
+        <div class="plans-grid">
+
+          <article class="plan-card" data-reveal>
+            <div class="plan-top">
+              <h3 class="plan-name">Kraft</h3>
+              <p class="plan-tagline">Para entrenar y jugar</p>
+            </div>
+            <div class="plan-price">
+              <span class="plan-amount">$1.200</span>
+              <span class="plan-period">/ mes</span>
+            </div>
+            <ul class="plan-features">
+              <li>Gym libre acceso</li>
+              <li>Funcional 3x por semana</li>
+              <li>Descuento en cancha ($250 c/u)</li>
+            </ul>
+            <a href="https://wa.me/59899000000?text=Hola%20Kraft%2C%20quiero%20el%20plan%20Kraft%20%28%241.200%2Fmes%29" target="_blank" rel="noopener" class="btn btn-outline plan-cta" data-cursor="hover">Quiero este plan</a>
+          </article>
+
+          <article class="plan-card plan-pro" data-reveal>
+            <span class="plan-badge">Premium</span>
+            <div class="plan-top">
+              <h3 class="plan-name">Kraft Pro</h3>
+              <p class="plan-tagline">La experiencia completa</p>
+            </div>
+            <div class="plan-price">
+              <span class="plan-amount">$2.800</span>
+              <span class="plan-period">/ mes</span>
+            </div>
+            <ul class="plan-features">
+              <li>3 clases de pádel al mes con profe</li>
+              <li>Funcional Lun, Mié y Vie</li>
+              <li>Gym libre acceso</li>
+            </ul>
+            <a href="https://wa.me/59899000000?text=Hola%20Kraft%2C%20quiero%20el%20plan%20Kraft%20Pro%20%28%242.800%2Fmes%29" target="_blank" rel="noopener" class="btn btn-lime plan-cta" data-magnetic data-cursor="hover">Quiero este plan</a>
+          </article>
+
+        </div>
+
+        <p class="plans-note" data-reveal>Ambos planes incluyen gym libre acceso.</p>
+      </div>
+    </section>
+
+    <!-- ============ EL PROFE ============ -->
+    <section class="coach" id="profe">
+      <div class="container coach-grid">
+        <div class="coach-media" data-reveal>
+          <img src="assets/img/coach-santiago.jpg" alt="Santiago Santos — Profesor de pádel" loading="lazy" decoding="async" />
+          <span class="coach-media-tag">Profe Kraft</span>
+        </div>
+        <div class="coach-text">
+          <p class="section-label" data-reveal>El profe</p>
+          <h2 class="coach-name split-words">Santiago Santos</h2>
+          <p class="coach-role" data-reveal>Profesor de Pádel</p>
+          <p class="coach-bio" data-reveal>
+            Santiago lleva la técnica al detalle. Cada clase es una corrección, un ajuste,
+            un paso adelante. No importa si recién empezás o si ya competís — con él, tu
+            juego mejora.
+          </p>
+          <p class="coach-detail" data-reveal>
+            <span class="coach-detail-dot"></span>
+            Sus clases están incluidas en el plan <strong>Kraft Pro</strong> — 3 clases al mes.
+          </p>
+          <a href="#planes" class="btn btn-outline" data-magnetic data-cursor="hover">Ver plan Kraft Pro</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVÁ / CALENDARIO ============ -->
+    <section class="booking" id="reserva">
+      <div class="container">
+        <div class="booking-head">
+          <p class="section-label" data-reveal>Reservá</p>
+          <h2 class="section-title split-words">Asegurá tu cancha</h2>
+          <p class="booking-note" data-reveal>Reservá tu horario y coordinamos por WhatsApp.</p>
+        </div>
+
+        <div class="booking-panel" data-reveal>
+          <div class="booking-calendar">
+            <div class="cal-header">
+              <span class="cal-month" id="calMonth">Mes</span>
+            </div>
+            <div class="cal-weekdays">
+              <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span><span>Do</span>
+            </div>
+            <div class="cal-days" id="calDays"><!-- JS fills --></div>
+          </div>
+
+          <div class="booking-slots">
+            <p class="booking-slots-label">Elegí un horario</p>
+            <div class="slots-grid" id="slotsGrid">
+              <button class="slot" type="button">10:00</button>
+              <button class="slot" type="button">11:30</button>
+              <button class="slot" type="button">13:00</button>
+              <button class="slot" type="button">14:30</button>
+              <button class="slot" type="button">16:00</button>
+              <button class="slot" type="button">17:30</button>
+              <button class="slot" type="button">19:00</button>
+              <button class="slot" type="button">20:30</button>
+              <button class="slot" type="button">22:00</button>
+            </div>
+            <div class="booking-summary" id="bookingSummary">Seleccioná día y horario.</div>
+            <a href="https://wa.me/59899000000?text=Hola%20Kraft%2C%20quiero%20reservar%20una%20cancha" target="_blank" rel="noopener" class="btn btn-lime booking-confirm" id="bookingConfirm" data-magnetic data-cursor="hover">Confirmar reserva</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat" data-reveal>
+          <span class="stat-num" data-count="4" data-suffix="">0</span>
+          <span class="stat-label">Canchas profesionales</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-num" data-count="6" data-suffix="">0</span>
+          <span class="stat-label">Clases de funcional / semana</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-num" data-count="120" data-suffix="+">0</span>
+          <span class="stat-label">Miembros de la comunidad</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-num" data-count="4" data-suffix="">0</span>
+          <span class="stat-label">Disciplinas en un solo lugar</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMUNIDAD ============ -->
+    <section class="community" id="comunidad">
+      <div class="container">
+        <div class="community-head">
+          <p class="section-label" data-reveal>Comunidad</p>
+          <h2 class="community-headline split-words">Acá no venís solo a jugar. <span class="lime">Te quedás.</span></h2>
+          <p class="community-text" data-reveal>
+            Kraft es mucho más que canchas. Es el lugar donde la jugada sigue después
+            del partido: ping pong, PlayStation, juegos de mesa y una cantina con bebidas
+            y comidas. El club que arma comunidad.
+          </p>
+        </div>
+
+        <div class="community-grid">
+          <figure class="community-item community-item-lg" data-reveal>
+            <img src="assets/img/padel-01.jpg" alt="Cancha de pádel Kraft" loading="lazy" decoding="async" />
+            <figcaption>El juego</figcaption>
+          </figure>
+          <figure class="community-item" data-reveal>
+            <img src="assets/img/padel-02.jpg" alt="Jugadores de pádel" loading="lazy" decoding="async" />
+            <figcaption>La cancha</figcaption>
+          </figure>
+          <figure class="community-item" data-reveal>
+            <img src="assets/img/padel-03.jpg" alt="Entrenamiento funcional" loading="lazy" decoding="async" />
+            <figcaption>El funcional</figcaption>
+          </figure>
+          <figure class="community-item community-item-wide" data-reveal>
+            <img src="assets/img/padel-04.jpg" alt="Comunidad Kraft" loading="lazy" decoding="async" />
+            <figcaption>La comunidad</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta-final">
+      <div class="container">
+        <h2 class="cta-final-title split-words">Tu lugar en la cancha te espera.</h2>
+        <div class="cta-final-actions" data-reveal>
+          <a href="https://wa.me/59899000000?text=Hola%20Kraft%2C%20quiero%20sumarme" target="_blank" rel="noopener" class="btn btn-lime" data-magnetic data-cursor="hover">Escribinos por WhatsApp</a>
+          <a href="https://instagram.com/kraftpadeluy" target="_blank" rel="noopener" class="btn btn-outline" data-magnetic data-cursor="hover">@kraftpadeluy</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo-placeholder footer-logo">KRAFT<span class="dot">.</span></span>
+        <p class="footer-tagline">Pádel · Funcional · Gimnasio · Comunidad</p>
+        <p class="footer-founder">Fundado por <a href="https://www.instagram.com/valentinlabordeuy/" target="_blank" rel="noopener" class="founder-link" data-cursor="hover"><strong>Valentín Laborde</strong></a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Club</h4>
+        <a href="#servicios" data-cursor="hover">Servicios</a>
+        <a href="#planes" data-cursor="hover">Planes</a>
+        <a href="#profe" data-cursor="hover">Clases</a>
+        <a href="#reserva" data-cursor="hover">Reservá</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="https://maps.google.com/?q=Florida+1573+Paysandú" target="_blank" rel="noopener" data-cursor="hover">Florida 1573, Paysandú</a>
+        <a href="https://instagram.com/kraftpadeluy" target="_blank" rel="noopener" data-cursor="hover">@kraftpadeluy</a>
+        <a href="https://wa.me/59899000000?text=Hola%20Kraft" target="_blank" rel="noopener" data-cursor="hover">WhatsApp</a>
+      </div>
+
+      <div class="footer-col footer-cta-col">
+        <h4>Sumate</h4>
+        <a href="#reserva" class="btn btn-lime footer-btn" data-cursor="hover">Reservá tu cancha</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> Kraft Pádel Center — Paysandú, Uruguay</p>
+      <p class="footer-credit">Web por <a href="#" data-cursor="hover">Nikato Estudio</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script defer src="lib/gsap.min.js?v=20260617c"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=20260617c"></script>
+  <script defer src="lib/lenis.min.js?v=20260617c"></script>
+  <script defer src="main.js?v=20260617c"></script>
+</body>
+</html>

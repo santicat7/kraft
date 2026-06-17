@@ -1,0 +1,1 @@
+Coloca aqui el logo real del cliente: logo.png (fondo transparente, ~400px de alto).

@@ -1,0 +1,7 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# debug de procesamiento de logos
+assets/img/logos/_dbg_*.png
