@@ -127,7 +127,7 @@ section { position: relative; }
   z-index: 9999; border-radius: 50%; opacity: 0;
   transform: translate(-50%, -50%);
 }
-.cursor-dot { width: 5px; height: 5px; background: var(--lime); }
+.cursor-dot { display: none; }   /* solo se muestra el círculo */
 .cursor-ring {
   width: 32px; height: 32px; border: 1px solid var(--lime);
   transition: width .3s var(--ease), height .3s var(--ease),
@@ -138,6 +138,10 @@ section { position: relative; }
 }
 @media (hover: none), (pointer: coarse) {
   .cursor-dot, .cursor-ring { display: none; }
+}
+/* en desktop ocultamos el cursor nativo: queda solo el círculo */
+@media (hover: hover) and (pointer: fine) {
+  html, body, a, button, .slot, .cal-day, [data-cursor="hover"] { cursor: none; }
 }
 
 /* =================================================================
