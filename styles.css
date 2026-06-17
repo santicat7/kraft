@@ -127,7 +127,7 @@ section { position: relative; }
   z-index: 9999; border-radius: 50%; opacity: 0;
   transform: translate(-50%, -50%);
 }
-.cursor-dot { display: none; }   /* solo se muestra el círculo */
+.cursor-dot { width: 5px; height: 5px; background: var(--lime); }
 .cursor-ring {
   width: 32px; height: 32px; border: 1px solid var(--lime);
   transition: width .3s var(--ease), height .3s var(--ease),
