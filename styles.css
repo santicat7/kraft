@@ -373,6 +373,14 @@ section { position: relative; }
 }
 .service:hover .service-title { color: var(--lime-bright); }
 .service-desc { margin-top: 10px; max-width: 56ch; color: var(--muted); font-size: 15.5px; }
+.service-desc strong { color: var(--lime); font-weight: 600; }
+.service-tag {
+  display: inline-block; vertical-align: middle; margin-left: 10px;
+  font-family: var(--sans); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #0A0F0C; background: var(--lime); border-radius: 100px; padding: 4px 11px;
+  transform: translateY(-2px);
+}
 .service-link {
   font-size: 14px; font-weight: 600; color: var(--cream); white-space: nowrap;
   display: inline-flex; align-items: center; gap: 8px; transition: color .3s ease;
