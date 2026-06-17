@@ -341,18 +341,27 @@ section { position: relative; }
   grid-template-columns: 90px 1fr auto;
   gap: 30px; align-items: center;
   padding: clamp(28px, 4vh, 46px) 0;
+  padding-left: 0;
   border-bottom: 1px solid var(--border);
   position: relative;
-  transition: background .4s var(--ease);
+  transition: padding-left .45s var(--ease);
 }
+/* relleno: aparece por ENCIMA de la línea, borde izquierdo RECTO (sin curva) */
 .service::after {
-  content: ''; position: absolute; inset: 0; z-index: 1;   /* por encima de la línea (border), debajo del contenido */
-  background: linear-gradient(90deg, rgba(181,229,80,0.08), transparent 70%);
-  border-radius: 12px; pointer-events: none;
-  opacity: 0; transition: opacity .4s var(--ease);
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(45,106,79,0.42) 0%, rgba(45,106,79,0.12) 45%, transparent 80%);
+  opacity: 0; transition: opacity .45s var(--ease);
 }
+/* barra de acento lima en el borde izquierdo recto */
+.service::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; z-index: 2;
+  background: var(--lime); transform: scaleY(0); transform-origin: center;
+  transition: transform .45s var(--ease);
+}
+.service:hover { padding-left: 26px; }
 .service:hover::after { opacity: 1; }
-.service-num, .service-body, .service-action { position: relative; z-index: 2; }
+.service:hover::before { transform: scaleY(1); }
+.service-num, .service-body, .service-action { position: relative; z-index: 3; }
 .service-num {
   font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--lime);
   transition: transform .4s var(--ease);
