@@ -503,6 +503,20 @@ section { position: relative; }
 }
 .booking-summary strong { color: var(--lime); }
 .booking-confirm { margin-top: auto; width: 100%; }
+.booking-confirm.is-disabled {
+  background: rgba(181,229,80,0.18); color: rgba(244,241,232,0.55);
+  box-shadow: none; cursor: not-allowed;
+}
+.booking-confirm.is-disabled:hover { background: rgba(181,229,80,0.18); }
+@keyframes summaryShake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); } 40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); } 80% { transform: translateX(4px); }
+}
+.booking-summary.shake {
+  animation: summaryShake .4s ease;
+  border-color: rgba(181,229,80,0.5);
+}
 
 /* =================================================================
    STATS

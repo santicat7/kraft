@@ -243,8 +243,11 @@
       });
     }
 
+    var ready = false;
+
     function updateSummary() {
-      if (selectedDay && selectedSlot) {
+      ready = !!(selectedDay && selectedSlot);
+      if (ready) {
         summary.innerHTML = "Cancha el <strong>" + selectedDay + " de " + monthNames[month] +
           "</strong> a las <strong>" + selectedSlot + "</strong>.";
       } else if (selectedDay) {
@@ -252,11 +255,33 @@
       } else {
         summary.textContent = "Seleccioná día y horario.";
       }
-      if (confirm && selectedDay && selectedSlot) {
-        var msg = "Hola Kraft, quiero reservar una cancha el " + selectedDay + " de " +
-          monthNames[month] + " a las " + selectedSlot + ".";
-        confirm.href = "https://wa.me/59899000000?text=" + encodeURIComponent(msg);
+      if (!confirm) return;
+      if (ready) {
+        var msg = "Hola, quiero reservar la cancha para el " + selectedDay + " de " +
+          monthNames[month] + " en el horario de " + selectedSlot + ". ¿Está disponible?";
+        confirm.href = "https://wa.me/59891486190?text=" + encodeURIComponent(msg);
+        confirm.classList.remove("is-disabled");
+        confirm.removeAttribute("aria-disabled");
+      } else {
+        // sin día y hora: deshabilitado hasta que se complete
+        confirm.href = "#reserva";
+        confirm.classList.add("is-disabled");
+        confirm.setAttribute("aria-disabled", "true");
       }
+    }
+
+    // estado inicial: botón deshabilitado
+    if (confirm) {
+      confirm.classList.add("is-disabled");
+      confirm.setAttribute("aria-disabled", "true");
+      confirm.addEventListener("click", function (e) {
+        if (!ready) {
+          e.preventDefault();
+          summary.classList.remove("shake"); void summary.offsetWidth; // reinicia animación
+          summary.classList.add("shake");
+          summary.textContent = "Elegí un día y un horario para confirmar.";
+        }
+      });
     }
   }
 
