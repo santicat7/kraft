@@ -621,6 +621,8 @@ section { position: relative; }
 
   .plans-grid { grid-template-columns: 1fr; max-width: 460px; }
   .coach-grid { grid-template-columns: 1fr; }
+  .coach-reverse .coach-grid { grid-template-columns: 1fr; }
+  .coach-reverse .coach-media { order: -1; }
   .coach-media { max-width: 420px; aspect-ratio: 4/4.4; }
   .booking-panel { grid-template-columns: 1fr; }
   .booking-calendar { border-right: none; border-bottom: 1px solid var(--border); }
